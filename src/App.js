@@ -18,8 +18,6 @@ const { Header, Content, Footer } = Layout;
 const { Search } = Input;
 const { Meta } = Card;
 const TextTitle = Typography.Title;
-
-
 const SearchBox = ({searchHandler}) => {
     return (
         <Row>
@@ -35,13 +33,10 @@ const SearchBox = ({searchHandler}) => {
         </Row>
     )
 }
-
-
 const ColCardBox = ({Title, imdbID, Poster, Type, ShowDetail, DetailRequest, ActivateModal}) => {
 
     const clickHandler = () => {
 
-        // Display Modal and Loading Icon
         ActivateModal(true);
         DetailRequest(true);
 
@@ -124,9 +119,6 @@ const Loader = () => (
         <Spin />
     </div>
 )
-
-
-
 function App() {
 
     const [data, setData] = useState(null);
